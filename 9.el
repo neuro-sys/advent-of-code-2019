@@ -1,15 +1,15 @@
 (require 'queue)
 
-(defconst op-add 1) ;; Add:           add a, b, c  => Add a and b, write to c
-(defconst op-mul 2) ;; Multiply:      mul a, b, c  => Multiply a and b, write to c
-(defconst op-in 3)  ;; Read input:    in a         => Read input queue, write to a
-(defconst op-out 4) ;; Write output:  out a        => Read a, write to putput queue
-(defconst op-jt 5) ;; Jump if True:   jt a, b      => If a = 1 then jump to b
-(defconst op-jf 6) ;; Jump if False:  jf a, b      => If a = 0 then jump to b
-(defconst op-lt 7) ;; Less Than:      lt a, b, c   => If a > b then write 1 to c, otherwise 0
-(defconst op-eq 8) ;; Equals:         eq a, b, c   => If a = b then write 1 to c, otherwise 0
-(defconst op-rel 9) ;; Set Relative:  rel a        => Set rel register to a
-(defconst op-end 99) ;; Program end:  end
+(defconst op-add 1)  ;; Add           add a, b, c  => Add a and b, write to c
+(defconst op-mul 2)  ;; Multiply      mul a, b, c  => Multiply a and b, write to c
+(defconst op-in 3)   ;; Read input    in a         => Read input queue, write to a
+(defconst op-out 4)  ;; Write output  out a        => Read a, write to putput queue
+(defconst op-jt 5)   ;; Jump if True  jt a, b      => If a = 1 then jump to b
+(defconst op-jf 6)   ;; Jump if False jf a, b      => If a = 0 then jump to b
+(defconst op-lt 7)   ;; Less Than     lt a, b, c   => If a > b then write 1 to c, otherwise 0
+(defconst op-eq 8)   ;; Equals        eq a, b, c   => If a = b then write 1 to c, otherwise 0
+(defconst op-rel 9)  ;; Set Relative  rel a        => Set rel register to a
+(defconst op-end 99) ;; End           end          => Finish program
 
 (defconst mode-position 0)
 (defconst mode-immediate 1)
