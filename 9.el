@@ -15,6 +15,11 @@
 (defconst mode-immediate 1)
 (defconst mode-relative 2)
 
+;; Parameter modes:
+;; - a is immediate
+;; - (a) is indirect positional
+;; - (rel+a) is indirect relative
+
 (defun load-program (&optional extra-space)
   (with-temp-buffer
     (insert-file-contents "9.txt")
